@@ -1,0 +1,242 @@
+html{
+	font-size: 62.5%;
+	background-color: var(--blue-base);
+}
+:root{
+	--aqua-base:#b0f4f1;
+	--pink-base:#ffe5f8;
+	--blue-base:#c4e0ff;
+	--main-font:'Fira Sans Condensed', sans-serif;
+	--grid-width:114rem;
+	--gutter-vertical:8rem;
+	--gutter-horizontal:6rem;
+}
+.content-one{
+	height:90rem;
+}
+.one-bg{
+	background-image: url(IMAGES/onebg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:90rem;
+	width: 100%;
+	position: absolute;
+	filter: blur(1rem);
+}
+*{
+	box-sizing: border-box;
+}
+.one-info{
+	background-color: rgb(0,0,0); /* Fallback color */
+  	background-color: rgba(0,0,0, 0.4);
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	z-index: 2;
+ 	width: 80%;
+ 	padding: 20px;
+ 	text-align: center;
+ 	font-family: var(--main-font);
+ 	font-size: 3rem;
+ 	animation-name: one-info-animate;
+	animation-duration:1.5s;
+	animation-timing-function:ease-in;
+}
+@keyframes one-info-animate{
+	0%{
+		opacity: 0;
+		filter: blur(5rem);
+	}
+	50%{
+		opacity: 0.5;
+		filter: blur(2rem);
+	}
+	100%{
+		opacity: 1;
+		filter: unset;
+	}
+}
+.content-two{
+	height:50rem;
+	width:100%;
+}
+.two-info{
+	height:100vh;
+}
+.two-text{
+	width:40%;
+	float: left;
+	height:60rem;
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+	transform: translateY(25rem);
+}
+.two-photos{
+	width:60%;
+	float: right;
+	height:60rem;
+}
+.two-photo-container{
+	transform: translate(10rem, 10rem);
+	text-align: center;
+}
+.two-photo{
+	height:25rem;
+	width:40rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	border: 3px solid #f1f1f1;
+}
+.twoa{
+	background-image: url(IMAGES/twoa.jpg);
+	transform: translateX(20rem);
+}
+.twob{
+	background-image: url(IMAGES/twob.jpg);
+	transform: translateY(25rem);
+}
+.twoc{
+	background-image: url(IMAGES/twoc.jpg);
+	transform: translate(35rem, 15rem);
+}
+.two-photo:not(:hover){
+	opacity: 0.6;
+}
+.two-photo:hover{
+	z-index: 100;
+}
+@media screen and (max-width:900px){
+	/*.two-text{
+		width:100%;
+	}
+	.two-photos{
+	width:60%;
+	float: right;
+	height:60rem;
+	}
+	.two-photo-container{
+	transform: translate(10rem, 10rem);
+	text-align: center;
+}*/
+}
+.content-three{
+	height:80rem;
+	background-image: linear-gradient( 
+		var(--blue-base), #136dc1 );
+}
+.card-row{
+	display: flex;
+	justify-content: space-between;
+	width:100%;/*
+	margin-left: 1%;*/
+	height:100vh;
+}
+.card{
+	perspective: 150rem;
+	-moz-perspective:150rem;
+	position:relative;
+	margin-top: 25px;
+	margin-right: auto;/*
+	margin-left: 80px;*/
+	transition: transform 0.7s;
+	width: calc((100% - 24rem)/4);
+}
+.card-side{
+	height:60rem;
+	width: 40rem;
+	font-size:15px;
+	color:white;
+	backface-visibility:hidden;
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.card-side-front{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	opacity: 0.8;
+}
+.card-side-back{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	transform: rotateY(180deg);
+}
+.card:hover .card-side-back{
+	transform: rotateY(0deg);
+	transition-duration: 1s;
+}
+.card:hover .card-side-front{
+	transform: rotateY(-180deg);
+	transition-duration: 1s;
+}
+.card-one-side{
+	background-image: url(IMAGES/sunrise.jpg);
+}
+.card-two-side{
+	background-image: url(IMAGES/noon.jpg);
+}
+.card-three-side{
+	background-image: url(IMAGES/sunset.jpg);
+}
+.time{
+	filter: unset;
+}
+.three-info{
+	opacity: 1;
+	background-color: rgb(0,0,0); /* Fallback color */
+  	background-color: rgba(0,0,0, 0.4);
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	z-index: 2;
+ 	width: 80%;
+ 	padding: 20px;
+ 	text-align: center;
+ 	font-family: var(--main-font);
+ 	font-size: 3rem;
+}
+.content-four{
+	height: 90rem;
+}
+.four-bg{
+	height:90rem;
+	width:100%;
+	background-image: url(IMAGES/end.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.end{
+	background-color: rgb(0,0,0); /* Fallback color */
+  	background-color: rgba(0,0,0, 0.4);
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+  	position: absolute;
+  	text-align: center;
+  	transform: translate(10rem, -55rem);
+  	z-index: 2;
+ 	width: 80%;
+ 	padding: 20px;
+ 	text-align: center;
+ 	font-family: var(--main-font);
+ 	font-size: 3rem;
+ 	position: absolute;
+}
